@@ -22,6 +22,13 @@ gulp.task('css', () => {
 		.pipe(gulp.dest('dist/styles'));
 });
 
+// Fonts -----------------------------------------------------------------------
+
+gulp.task('fonts', () => {
+	return gulp.src('node_modules/westyle/build/fonts/**')
+		.pipe(gulp.dest('dist/fonts'));
+});
+
 // Server ----------------------------------------------------------------------
 
 gulp.task('server', () => {
