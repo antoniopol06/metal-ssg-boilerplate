@@ -1,17 +1,17 @@
 ---
-description: "Home description."
-title: "Home"
+title: "Awesome Project"
+description: "Something nice and compelling about the project. Make it short and sweet."
 ---
 
 {namespace pageIndex}
 
 /**
- *
+ * @param site
  */
 {template .render}
 	{call main.render data="all"}
 		{param content kind="html"}
-			{call .header /}
+			{call .header data="all" /}
 			{call .why /}
 			{call .highlights /}
 			{call .how /}
@@ -22,13 +22,13 @@ title: "Home"
 {/template}
 
 /**
- *
+ * @param site
  */
 {template .header}
 	<header class="header">
 		<div class="container">
-			<h1 class="header-title">Awesome Project</h1>
-			<h2 class="header-subtitle">Something nice and compelling about the project. Make it short and sweet.</h2>
+			<h1 class="header-title">{$site.index.title}</h1>
+			<h2 class="header-subtitle">{$site.index.description}</h2>
 			<div class="header-cta">
 				<a href="#" class="btn btn-accent">Main call to action</a>
 				<a href="#" class="btn btn-default">Secondary action</a>
