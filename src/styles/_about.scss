@@ -1,0 +1,18 @@
+.about {
+    border-bottom: 5px solid rgba($primary, .1);
+	text-align: center;
+	padding: 150px 0;
+}
+
+.about-title {
+	font-family: $font-family-secondary-bold;
+	font-size: 36px;
+	margin: 20px 0;
+}
+
+.about-description {
+	font-family: $font-family-sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0;
+}

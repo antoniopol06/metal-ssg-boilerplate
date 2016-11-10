@@ -6,21 +6,155 @@ title: "Home"
 {namespace pageIndex}
 
 /**
- * This template will be rendered by SoyWeb when the user loads static.soy.
- * It deliberately includes dummy data so the designer can get a feel for how
- * the task list will appear with real data rather with minimal copy and paste.
+ *
  */
 {template .render}
 	{call main.render data="all"}
 		{param content kind="html"}
-			<h2>Home</h2>
-
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Curabitur nulla libero, eleifend in euismod eget, fringilla id
-				diam. Proin quis interdum ipsum. Fusce eros metus, hendrerit ut
-				egestas nec, sagittis id velit.
-			</p>
+			{call .header /}
+			{call .why /}
+			{call .highlights /}
+			{call .how /}
+			{call .features /}
+			{call .footer /}
 		{/param}
 	{/call}
+{/template}
+
+/**
+ *
+ */
+{template .header}
+	<header class="header">
+		<div class="container">
+			<h1 class="header-title">Awesome Project</h1>
+			<h2 class="header-subtitle">Something nice and compelling about the project. Make it short and sweet.</h2>
+			<div class="header-cta">
+				<a href="#" class="btn btn-accent">Main call to action</a>
+				<a href="#" class="btn btn-default">Secondary action</a>
+			</div>
+		</div>
+	</header>
+{/template}
+
+/**
+ *
+ */
+{template .why}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Start with why</h3>
+					<p class="about-description">Through the WHY, a story will arise, which will create trust and make an idea, a service, or a project unique. As Simon Sinek has said, having loyal users is all about attracting the people who share your fundamental beliefs. Remember: People don't buy what you do. They buy why you do it. I'll say it again: People don't buy what you do. They buy why you do it.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ *
+ */
+{template .highlights}
+	<div class="highlights">
+		<div class="container">
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">First highlight. It'll blow your mind.</h4>
+					<p class="highlight-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo ultricies vehicula ut.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="http://placehold.it/500x400/e7e8e8/64696d" alt="Placeholder">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-5 push-md-6 col-md-offset-2">
+					<img class="highlight-image" src="http://placehold.it/500x400/e7e8e8/64696d" alt="Placeholder">
+				</div>
+				<div class="col-md-6 push-md-5 col-md-offset-1">
+					<h4 class="highlight-title">It's that good. See for yourself.</h4>
+					<p class="highlight-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo ultricies vehicula ut.</p>
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">And lastly, this one. Checkmate.</h4>
+					<p class="highlight-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo ultricies vehicula ut.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="http://placehold.it/500x400/e7e8e8/64696d" alt="Placeholder">
+				</div>
+			</section>
+		</div>
+	</div>
+{/template}
+
+/**
+ *
+ */
+{template .how}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">It's easier than you think</h3>
+					<p class="about-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo ultricies vehicula ut.</p>
+				</div>
+			</div>
+		</div>
+	</acticle>
+{/template}
+
+/**
+ *
+ */
+{template .features}
+	<div class="features">
+		<div class="container">
+			<div class="row">
+				<section class="feature col-md-4 col-md-offset-2">
+					<div class="feature-icon">
+						<span class="icon-16-bullhorn"></span>
+					</div>
+					<h3 class="feature-title">Heading</h3>
+					<p class="feature-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo.</p>
+				</section>
+				<section class="feature col-md-4">
+					<div class="feature-icon">
+						<span class="icon-16-lock"></span>
+					</div>
+					<h3 class="feature-title">Heading</h3>
+					<p class="feature-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo.</p>
+				</section>
+				<section class="feature col-md-4">
+					<div class="feature-icon">
+						<span class="icon-16-calendar"></span>
+					</div>
+					<h3 class="feature-title">Heading</h3>
+					<p class="feature-description">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros praesent commodo.</p>
+				</section>
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ *
+ */
+{template .footer}
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<p class="pull-left">
+						Copyright © 2016 <a href="https://liferay.com">Liferay, Inc.</a>
+					</p>
+					<p class="pull-right">
+						Powered by <a href="http://wedeploy.com">WeDeploy™</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 {/template}

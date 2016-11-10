@@ -1,1 +1,9 @@
+$accent: #4285f4;
+
 @import "node_modules/westyle/src/westyle";
+
+@import "./header";
+@import "./about";
+@import "./features";
+@import "./highlights";
+@import "./footer";
