@@ -1,17 +1,10 @@
 const connect = require('gulp-connect');
 const gulp = require('gulp');
-const registerTasks = require('metal-ssg').registerTasks;
+const ssg = require('metal-ssg');
 const sass = require('gulp-sass');
 
-registerTasks({
+ssg.registerTasks({
 	gulp: gulp
-});
-
-// HTML ------------------------------------------------------------------------
-
-gulp.task('html', () => {
-	return gulp.src('src/**/*.html')
-		.pipe(gulp.dest('dist'));
 });
 
 // CSS -------------------------------------------------------------------------
