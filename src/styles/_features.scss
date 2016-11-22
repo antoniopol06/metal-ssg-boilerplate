@@ -12,6 +12,8 @@
 .feature-icon [class*="icon-16-"] {
 	color: $accent;
 	font-size: 42px;
+	position: relative;
+	top: 10px;
 }
 
 .feature-title {
