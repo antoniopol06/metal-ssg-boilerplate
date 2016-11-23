@@ -2,7 +2,7 @@
 
 /**
  * @param content
- * @param? frontMatter
+ * @param? page
  * @param? scripts
  * @param serialized
  */
@@ -13,9 +13,9 @@
 		<meta charset="UTF-8">
 		<meta content="minimum-scale=1.0, width=device-width" name="viewport">
 		<meta name="format-detection" content="telephone=no">
-		<meta name="description" content="{$frontMatter.description ?: ''}">
+		<meta name="description" content="{$page.description ?: ''}">
 
-		<title>{$frontMatter.title}</title>
+		<title>{$page.title} - Awesome Project</title>
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono">
 		<link rel="stylesheet" href="/styles/main.css">
@@ -37,7 +37,7 @@
 		{/if}
 
 		<script>
-			metal.Component.render(metal['{$frontMatter.componentName}'], {lb}
+			metal.Component.render(metal['{$page.componentName}'], {lb}
 				element: '#pageComponent',
 				site: JSON.parse({$serialized})
 			{rb});
