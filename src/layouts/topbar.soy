@@ -1,0 +1,39 @@
+{namespace Topbar}
+
+/**
+ * @param site
+ */
+{template .main}
+	<nav class="topbar">
+		{call .logo data="all" /}
+		{call .menu data="all" /}
+	</nav>
+{/template}
+
+/**
+ *
+ */
+{template .logo}
+	<div class="topbar-logo">
+		<a class="topbar-logo-link" href="/">
+			<span class="icon icon-16-heart"></span>
+			<span class="name">Awesome</span>
+			<span class="by">by Liferay</span>
+		</a>
+	</div>
+{/template}
+
+/**
+ * @param site
+ */
+{template .menu}
+	<ul class="topbar-list">
+		{foreach $item in $site.index.children}
+			<li class="topbar-item">
+				<a class="topbar-link {$item.active ? 'topbar-link-selected' : ''}" href="{$item.url}">
+					{$item.title}
+				</a>
+			</li>
+		{/foreach}
+	</ul>
+{/template}
