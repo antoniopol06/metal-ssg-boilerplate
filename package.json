@@ -2,6 +2,7 @@
   "name": "metal-ssg-boilerplate",
   "version": "0.0.0",
   "dependencies": {
+    "metal-toggler": "^v1.0.0-rc.1",
     "westyle": "wedeploy/westyle#master"
   },
   "devDependencies": {
