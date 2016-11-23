@@ -2,6 +2,7 @@ const connect = require('gulp-connect');
 const gulp = require('gulp');
 const ssg = require('metal-ssg');
 const sass = require('gulp-sass');
+const runSequence = require('run-sequence');
 
 ssg.registerTasks({
 	gulp: gulp
@@ -35,9 +36,10 @@ gulp.task('server', () => {
 
 gulp.task('watch', () => {
 	gulp.watch('src/styles/**/*.scss', ['css']);
-	gulp.watch('src/**/*.html', ['html']);
 });
 
 // Build -----------------------------------------------------------------------
 
-gulp.task('default', ['generate', 'css', 'html', 'server']);
+gulp.task('default', (callback) => {
+	runSequence('generate', ['css', 'fonts'], 'server', callback);
+});
