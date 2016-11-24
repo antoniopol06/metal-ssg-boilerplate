@@ -1,0 +1,40 @@
+{
+	"index": {
+		"title": "Home",
+		"description": "Something nice and compelling about the project. Make it short and sweet.",
+		"url": "/",
+		"children": [
+			{
+				"children": [
+					{
+						"description": "Build description.",
+						"title": "Build",
+						"icon": "hammer",
+						"url": "/docs/build.html"
+					},
+					{
+						"description": "Create description.",
+						"title": "Create",
+						"icon": "flash",
+						"url": "/docs/create.html"
+					},
+					{
+						"description": "Deploy description.",
+						"title": "Deploy",
+						"icon": "cloud",
+						"url": "/docs/deploy.html"
+					},
+					{
+						"description": "Develop description.",
+						"title": "Develop",
+						"icon": "code-file",
+						"url": "/docs/develop.html"
+					}
+				],
+				"description": "Documentation description.",
+				"title": "Documentation",
+				"url": "/docs"
+			}
+		]
+	}
+}
