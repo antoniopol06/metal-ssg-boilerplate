@@ -1,0 +1,47 @@
+{namespace guide}
+
+/**
+ * @param site
+ */
+{template .render}
+	{call main.render data="all"}
+		{param elementClasses: 'docs' /}
+		{param content kind="html"}
+			{call Sidebar.render}
+				{param items: $site.index.children[0].children /}
+			{/call}
+
+			{call .guide data="all" /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ * @param page
+ * @param content
+ */
+{template .guide}
+	<div class="sidebar-offset">
+		<header class="guide-header">
+			<div class="container-hybrid">
+				<h1 class="guide-header-title">{$page.title} Guide</h1>
+			</div>
+		</header>
+
+		<div class="container-hybrid">
+			<div class="docs-guide row">
+				<div class="docs-content col-xs-16 col-md-9">
+					{$content}
+				</div>
+
+				<nav class="col-xs-16 col-md-offset-2 col-md-5">
+					<div class="docs-nav-container">
+						<div class="docs-nav affix-top">
+							<div id="reading-container"><div class="reading-progress"><ul><li><a href="#install-dependencies" class=""><span class="reading-title">Install dependencies</span><span class="reading-subtitle">11 sec read</span><svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" transform="rotate(-90 18 18)" stroke-dashoffset="84.82758620689656"></circle></svg></a></li><li><a href="#running-locally" class=""><span class="reading-title">Running locally</span><span class="reading-subtitle">13 sec read</span><svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" transform="rotate(-90 18 18)" stroke-dashoffset="87.35632183908046"></circle></svg></a></li><li><a href="#deploying-to-the-cloud" class=""><span class="reading-title">Deploying to the cloud</span><span class="reading-subtitle">24 sec read</span><svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" transform="rotate(-90 18 18)" stroke-dashoffset="99.81378026070763"></circle></svg></a></li><li><a href="#key-capabilities" class=""><span class="reading-title">Key capabilities</span><span class="reading-subtitle">31 sec read</span><svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" transform="rotate(-90 18 18)" stroke-dashoffset="100"></circle></svg></a></li><li><a href="#initializing-auth"><span class="reading-title">Initializing auth service</span><span class="reading-subtitle">20 sec read</span><svg x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36"><circle fill="none" stroke-width="2" cx="18" cy="18" r="16" stroke-dasharray="100 100" transform="rotate(-90 18 18)"></circle></svg></a></li></ul></div></div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+{/template}
