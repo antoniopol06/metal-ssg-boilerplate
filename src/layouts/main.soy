@@ -7,7 +7,7 @@
 {template .render}
 	<div class="{$elementClasses ?: 'main'}">
 		<main class="content">
-			{call Topbar.main data="all" /}
+			{call Topbar.render data="all" /}
 
 			{$content}
 		</main>
