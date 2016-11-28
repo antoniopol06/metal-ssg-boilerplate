@@ -37,9 +37,12 @@
 		{/if}
 
 		<script>
+			var data = JSON.parse({$serialized});
+
 			metal.Component.render(metal['{$page.componentName}'], {lb}
 				element: '#pageComponent',
-				site: JSON.parse({$serialized})
+				page: data.page,
+				site: data.site
 			{rb});
 		</script>
 	</body>
