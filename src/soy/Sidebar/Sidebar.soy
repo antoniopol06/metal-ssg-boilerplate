@@ -1,7 +1,7 @@
 {namespace Sidebar}
 
 /**
- * @param items
+ * @param section
  */
 {template .render}
 	<nav class="sidebar">
@@ -15,17 +15,15 @@
 		</a>
 		<ul class="sidebar-list sidebar-list-1 toggler-collapsed">
 			<li class="sidebar-item">
-				<form class="sidebar-search" action="/docs/search/" method="GET" enctype="multipart/form-data">
-					<div class="form-group">
-						<div class="input-inner-addon input-inner-addon-right">
-							<input name="q" class="form-control" type="text" placeholder="Search Docs" autocomplete="off" required>
-							<span class="input-inner-icon-helper icon-16-magnifier"></span>
-						</div>
-					</div>
-				</form>
+				<div class="sidebar-search">
+					{call SearchAutocomplete.render}
+						{param site: $section /}
+						{param placeholder: 'Search Docs' /}
+					{/call}
+				</div>
 			</li>
 
-			{foreach $item in $items}
+			{foreach $item in $section.children}
 				<li class="sidebar-item">
 					<a class="sidebar-link {$item.active ? 'sidebar-link-selected' : ''}" href="{$item.url}">
 						<span class="sidebar-icon icon-16-{$item.icon}"></span>

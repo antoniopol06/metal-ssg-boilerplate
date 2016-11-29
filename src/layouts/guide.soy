@@ -8,7 +8,7 @@
 		{param elementClasses: 'docs' /}
 		{param content kind="html"}
 			{call Sidebar.render}
-				{param items: $site.index.children[0].children /}
+				{param section: $site.index.children[0] /}
 			{/call}
 
 			{call .guide data="all" /}

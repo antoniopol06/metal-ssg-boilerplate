@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "metal-affix": "^2.0.0",
+    "metal-autocomplete": "^2.0.2",
     "metal-reading-progress": "^2.0.0",
     "metal-toggler": "^2.0.0",
     "westyle": "wedeploy/westyle#master"
