@@ -34,12 +34,12 @@ class SearchBase extends Component {
 	}
 
 	search_(query) {
-		const {maxResults, site} = this;
+		const {maxResults, section} = this;
 
 		let results = [];
 
-		if (site && query) {
-			results = this.filterResults_(site, query.toLowerCase());
+		if (section && query) {
+			results = this.filterResults_(section, query.toLowerCase());
 
 			if (results.length > maxResults) {
 				results = results.slice(0, maxResults);
@@ -51,10 +51,6 @@ class SearchBase extends Component {
 };
 
 SearchBase.STATE = {
-	site: {
-		validator: core.isObject
-	},
-
 	maxResults: {
 		validator: core.isNumber,
 		value: 4
@@ -68,6 +64,10 @@ SearchBase.STATE = {
 	results: {
 		validator: core.isArray,
 		value: []
+	},
+
+	section: {
+		validator: core.isObject
 	}
 };
 
