@@ -24,12 +24,14 @@
 			</li>
 
 			{foreach $item in $section.children}
-				<li class="sidebar-item">
-					<a class="sidebar-link {$item.active ? 'sidebar-link-selected' : ''}" href="{$item.url}">
-						<span class="sidebar-icon icon-16-{$item.icon}"></span>
-						<span>{$item.title}</span>
-					</a>
-				</li>
+				{if not $item.hidden}
+					<li class="sidebar-item">
+						<a class="sidebar-link {$item.active ? 'sidebar-link-selected' : ''}" href="{$item.url}">
+							<span class="sidebar-icon icon-16-{$item.icon}"></span>
+							<span>{$item.title}</span>
+						</a>
+					</li>
+				{/if}
 			{/foreach}
 		</ul>
 	</nav>

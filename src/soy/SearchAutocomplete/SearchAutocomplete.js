@@ -1,63 +1,26 @@
 'use strict';
 
 import Autocomplete from 'metal-autocomplete';
-import Component from 'metal-component';
 import core from 'metal';
 import Soy from 'metal-soy';
 
+import SearchBase from '../SearchBase/SearchBase';
 import templates from './SearchAutocomplete.soy';
 
-class SearchAutocomplete extends Component {
-	rendered() {
+class SearchAutocomplete extends SearchBase {
+	attached() {
 		const {element} = this;
 
-		const input = element.querySelector('input');
+		const {input} = this.refs;
 
 		if (input) {
 			var autocomplete = new Autocomplete({
-				data: this.data_.bind(this),
+				data: this.search_.bind(this),
 				format: this.format_.bind(this),
 				inputElement: input,
 				select: () => {}
 			});
 		}
-	}
-
-	data_(query) {
-		const {maxResults, site} = this;
-
-		let results = [];
-
-		if (site && query) {
-			results = this.filterResults_(site, query.toLowerCase());
-
-			if (results.length > maxResults) {
-				results = results.slice(0, maxResults);
-			}
-		}
-
-		return results;
-	}
-
-	filterResults_(data, query) {
-		let {children, description, title} = data;
-
-		let results = [];
-
-		description = description ? description.toLowerCase() : '';
-		title = title ? title.toLowerCase() : '';
-
-		if (title.indexOf(query) > -1 || description.indexOf(query) > -1) {
-			results.push(data);
-		}
-
-		if (children) {
-			children.forEach(child => {
-				results = results.concat(this.filterResults_(child, query));
-			});
-		}
-
-		return results;
 	}
 
 	format_(data) {
@@ -75,17 +38,6 @@ class SearchAutocomplete extends Component {
 				</div>
 			</a>`
 		};
-	}
-};
-
-SearchAutocomplete.STATE = {
-	site: {
-		validator: core.isObject
-	},
-
-	maxResults: {
-		validator: core.isNumber,
-		value: 4
 	}
 };
 
