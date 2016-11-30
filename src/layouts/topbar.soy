@@ -27,13 +27,11 @@
  * @param site
  */
 {template .menu}
-	<ul class="topbar-list">
-		{foreach $item in $site.index.children}
-			<li class="topbar-item">
-				<a class="topbar-link {$item.active ? 'topbar-link-selected' : ''}" href="{$item.url}">
-					{$item.title}
-				</a>
-			</li>
-		{/foreach}
-	</ul>
+	{call Navigation.render}
+		{param depth: 1 /}
+		{param elementClasses: 'topbar-list' /}
+		{param linkClasses: 'topbar-link' /}
+		{param listItemClasses: 'topbar-item' /}
+		{param section: $site.index /}
+	{/call}
 {/template}

@@ -13,26 +13,29 @@
 				<span class="icon-12-arrow-up-short"></span>
 			</span>
 		</a>
-		<ul class="sidebar-list sidebar-list-1 toggler-collapsed">
-			<li class="sidebar-item">
-				<div class="sidebar-search">
-					{call SearchAutocomplete.render}
-						{param site: $section /}
-						{param placeholder: 'Search Docs' /}
-					{/call}
-				</div>
-			</li>
 
-			{foreach $item in $section.children}
-				{if not $item.hidden}
-					<li class="sidebar-item">
-						<a class="sidebar-link {$item.active ? 'sidebar-link-selected' : ''}" href="{$item.url}">
-							<span class="sidebar-icon icon-16-{$item.icon}"></span>
-							<span>{$item.title}</span>
-						</a>
-					</li>
-				{/if}
-			{/foreach}
-		</ul>
+		<div class="sidebar-search">
+			{call SearchAutocomplete.render}
+				{param site: $section /}
+				{param placeholder: 'Search Docs' /}
+			{/call}
+		</div>
+
+		{call Navigation.render}
+			{param elementClasses: 'sidebar-list sidebar-list-1 toggler-collapsed' /}
+			{param listItemClasses: 'sidebar-item' /}
+			{param anchorVariant: 'sidebar' /}
+			{param section: $section /}
+		{/call}
 	</nav>
 {/template}
+
+/**
+ * @param page
+ */
+{deltemplate Navigation.anchor variant="'sidebar'"}
+	<a class="sidebar-link {$page.active ? 'sidebar-link-selected' : ''}" href="{$page.url}">
+		<span class="sidebar-icon icon-16-{$page.icon}"></span>
+		<span>{$page.title}</span>
+	</a>
+{/deltemplate}

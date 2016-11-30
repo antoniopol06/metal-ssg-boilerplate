@@ -546,20 +546,24 @@
 /* Sidebar
 	 ========================================================================== */
 
+.docs .sidebar-search {
+	margin: 20px;
+
+	.form-control {
+		border: 1px solid #FFF;
+
+		&:focus {
+			border-color: $accent;
+		}
+	}
+}
+
 .docs .sidebar-list {
 	list-style: none;
 	margin: 0;
-	padding: 24px 20px 0;
+	padding: 0 20px;
 	height: 100%;
 	overflow-y: auto;
-}
-
-.docs .sidebar-list .sidebar-search .form-control {
-	border: 1px solid #FFF;
-
-	&:focus {
-		border-color: $accent;
-	}
 }
 
 .docs .sidebar-list-1 .sidebar-link {
