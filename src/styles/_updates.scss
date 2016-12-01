@@ -121,18 +121,14 @@
 		margin-top: 25px;
 
 		.update-point {
-			border-width: 0;
-			text-decoration: underline;
-			text-indent: 3em;
-		}
-
-		.update-point {
 			background-color: transparent;
+			border-width: 0;
 			font-size: 20px;
 			font-weight: 600;
 			margin: 0 auto;
 			text-align: center;
-			text-indent:0;
+			text-decoration: underline;
+			text-indent: 0;
 			width: auto;
 		}
 	}
