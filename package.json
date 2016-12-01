@@ -1,6 +1,10 @@
 {
   "name": "docs-starter-kit",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Robert-Frampton/docs-starter-kit"
+  },
   "dependencies": {
     "metal-affix": "^2.0.0",
     "metal-autocomplete": "^2.0.2",
