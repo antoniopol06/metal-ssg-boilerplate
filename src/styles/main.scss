@@ -4,20 +4,24 @@ $accent: #4285f4;
 
 // General
 
-@import "./topbar";
+@import "topbar";
 
 // Home
 
-@import "./header";
-@import "./about";
-@import "./features";
-@import "./highlights";
-@import "./footer";
+@import "header";
+@import "about";
+@import "features";
+@import "highlights";
+@import "footer";
 
 // Docs
 
-@import "./autocomplete";
-@import "./docs";
-@import "./guide";
-@import "./search";
-@import "./topics";
+@import "autocomplete";
+@import "docs";
+@import "guide";
+@import "search";
+@import "topics";
+
+// Updates
+
+@import "updates";
