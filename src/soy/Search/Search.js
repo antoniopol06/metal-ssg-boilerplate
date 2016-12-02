@@ -1,7 +1,6 @@
 'use strict';
 
 import core from 'metal';
-import Router from 'metal-router';
 import Soy from 'metal-soy';
 
 import SearchBase from '../SearchBase/SearchBase';
