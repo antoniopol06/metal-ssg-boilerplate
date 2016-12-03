@@ -8,7 +8,7 @@
 	{call main.render data="all"}
 		{param elementClasses: 'docs' /}
 		{param content kind="html"}
-			{call Sidebar.render}
+			{call SSGSidebar.render}
 				{param section: $site.index.children[0] /}
 			{/call}
 
@@ -39,7 +39,7 @@
 
 				<nav class="col-xs-16 col-md-offset-2 col-md-5">
 					<div class="docs-nav-container">
-						{call GuideProgress.render}
+						{call SSGReadingProgress.render}
 							{param elementClasses: 'docs-nav' /}
 						{/call}
 					</div>

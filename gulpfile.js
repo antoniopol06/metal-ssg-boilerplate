@@ -7,7 +7,8 @@ const ssg = require('metal-ssg');
 const runSequence = require('run-sequence');
 
 ssg.registerTasks({
-	gulp: gulp
+	gulp: gulp,
+	plugins: ['metal-ssg-components']
 });
 
 // CSS -------------------------------------------------------------------------

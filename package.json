@@ -9,6 +9,7 @@
     "metal-affix": "^2.0.0",
     "metal-autocomplete": "^2.0.2",
     "metal-reading-progress": "^2.0.0",
+    "metal-ssg-components": "0.0.1",
     "metal-toggler": "^2.0.0",
     "westyle": "wedeploy/westyle#master"
   },
