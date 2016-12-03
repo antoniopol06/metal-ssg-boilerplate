@@ -6,11 +6,7 @@
     "url": "https://github.com/Robert-Frampton/docs-starter-kit"
   },
   "dependencies": {
-    "metal-affix": "^2.0.0",
-    "metal-autocomplete": "^2.0.2",
-    "metal-reading-progress": "^2.0.0",
-    "metal-ssg-components": "0.0.1",
-    "metal-toggler": "^2.0.0",
+    "metal-ssg-components": "^0.0.3",
     "westyle": "wedeploy/westyle#master"
   },
   "devDependencies": {
@@ -18,7 +14,7 @@
     "gulp-connect": "^2.2.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^2.0.1",
-    "metal-ssg": "^0.0.7",
+    "metal-ssg": "^0.0.8",
     "run-sequence": "^1.2.2"
   }
 }
