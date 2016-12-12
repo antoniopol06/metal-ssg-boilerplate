@@ -52,7 +52,8 @@ gulp.task('deploy', ['default'], () => {
 // Watch -----------------------------------------------------------------------
 
 gulp.task('watch', () => {
-	gulp.watch('src/styles/**/*.scss', ['css']);
+	runSequence('build');
+	gulp.watch('src/**/*', ['build']);
 });
 
 // Build -----------------------------------------------------------------------

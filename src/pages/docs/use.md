@@ -1,11 +1,12 @@
 ---
-description: "Build description."
-icon: "hammer"
+description: "Guide to use AlloyEditor."
+icon: "flash"
 layout: "guide"
-title: "Build"
+title: "Use"
+weight: 1
 ---
 
-###### Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Suco de cevadiss deixa as pessoas mais interessantiss. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+###### Mussum Ipsum, cacilds vidis litro abertis. Paisis, filhis, espiritis santis. A ordem dos tratores não altera o pão duris Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Ta deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
 
 <article id="article1">
 
