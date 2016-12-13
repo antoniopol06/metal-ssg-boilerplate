@@ -9,23 +9,15 @@ weight: 1
 
 <p>The buttons are configured via a common <strong>buttonCfg</strong> property, like this:</p>
 
-<pre>
-<code>
-var editor = AlloyEditor.editable('editable', {literal}{{/literal}
-
-    buttonCfg: {literal}{{/literal}
-
-        bold: {literal}{{/literal}
-
+```js
+var editor = AlloyEditor.editable('editable', {lb}
+    buttonCfg: {lb}
+        bold: {lb}
             tabIndex: 1
-
-        {literal}}{/literal}
-
-    {literal}}{/literal}
-{literal}}{/literal});
-</code>
-</pre>
-
+        {rb}
+    {rb}
+{rb});
+```
 <p>The <code>buttonCfg</code> is the property which contains the configurations for the different buttons. In this example, <code>bold</code> is the name of the button, which has to be configured and <code>tabIndex</code> is the property with the new value of 1 (by default 0). Each button has a static property <strong>key</strong> which value is the button name as should be passed to the configuration.</p>
 
 <p>The list of properties for each button can be retrieved from the <a href="/api/classes/ButtonBold.html">API documentation</a>, including the <strong>key</strong> property, which should be passed as button name in the configuration.</p>

@@ -12,36 +12,36 @@ weight: 3
 ## Default configuration
 
 <span>This is the default editor toolbars configuration</span>
-<pre>
-<code>
-var toolbars = {literal}{{/literal}
-        add: {literal}{{/literal}
+
+```js
+var toolbars = {lb}
+        add: {lb}
             buttons: ['image', 'camera', 'hline', 'table'],
 
             tabIndex: 2
 
-        {literal}}{/literal},
+        {rb},
 
-        styles: {literal}{{/literal}
+        styles: {lb}
 
             selections: AlloyEditor.Selections,
 
             tabIndex: 1
 
-        {literal}}{/literal}
+        {rb}
 
-{literal}}{/literal};
-</code>
-</pre>
+{rb};
+```
 
 <span>where <code>AlloyEditor.Selections</code> is</span>
-<pre><code>
-var Selections = [{literal}{{/literal}
+
+```js
+var Selections = [{lb}
     name: 'link',
     buttons: ['linkEdit'],
     test: AlloyEditor.SelectionTest.link
 
-    {literal}}{/literal}, {literal}{{/literal}
+    {rb}, {lb}
 
         name: 'image',
 
@@ -49,7 +49,7 @@ var Selections = [{literal}{{/literal}
 
         test: AlloyEditor.SelectionTest.image
 
-    {literal}}{/literal}, {literal}{{/literal}
+    {rb}, {lb}
 
         name: 'text',
 
@@ -57,7 +57,7 @@ var Selections = [{literal}{{/literal}
 
         test: AlloyEditor.SelectionTest.text
 
-    {literal}}{/literal}, {literal}{{/literal}
+    {rb}, {lb}
 
         name: 'table',
 
@@ -69,26 +69,23 @@ var Selections = [{literal}{{/literal}
 
         test: AlloyEditor.SelectionTest.table
 
-{literal}}{/literal}];
-</code>
-</pre>
-
+{rb}];
+```
 <p>The configuration above represents two toolbars - for adding content (images, code, etc.) and modify content based on the current selection type. You may remove any of those and the toolbar won't be shown when user makes the corresponding selection.</p>
 
 <span>To remove the toolbar for adding content, just <strong>remove</strong> the property <em>add</em></span>
-<pre><code>
-var toolbars = {literal}{{/literal}
 
-    styles: {literal}{{/literal}
+```js
+var toolbars = {lb}
+
+    styles: {lb}
 
         selections: AlloyEditor.Selections,
 
         tabIndex: 1
 
-    {literal}}{/literal}
+    {rb}
 
-{literal}}{/literal};
-</code>
-</pre>
-
+{rb};
+```
 </article>

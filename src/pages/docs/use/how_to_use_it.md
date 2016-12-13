@@ -12,7 +12,9 @@ weight: 1
 
 ## Add AlloyEditor's CSS to the page
 
-<pre><code class="html">&lt;link href="alloy-editor/assets/alloy-editor-ocean-min.css" rel="stylesheet"&gt;&lt;/link&gt;</code></pre>
+```html
+<link href="alloy-editor/assets/alloy-editor-ocean-min.css" rel="stylesheet"></link>
+```
 
 </article>
 
@@ -24,16 +26,21 @@ There are a <strong>few ways</strong> to add the editor to the page:
 
 <section>
   <span>Add the whole editor with all UI on the page</span>
-  <pre><code>&lt;script src="alloy-editor/alloy-editor-all-min.js"&gt;&lt;/script&gt;</code></pre>
+
+  ```html
+  <script src="alloy-editor/alloy-editor-all-min.js"></script>
+  ```
 
   <span>Add it on the page separating the CKEditor code from AlloyEditor. This is useful if in your project you already use CKEditor.</span>
-  <pre><code>&lt;script src="alloy-editor/alloy-editor-no-ckeditor-min.js"&gt;&lt;/script&gt;</code></pre>
+  <pre><code><script src="alloy-editor/alloy-editor-no-ckeditor-min.js"></script></code></pre>
 
   <span>Add it on the page separating the React code from AlloyEditor. This is useful if you already use React in your project.</span>
-  <pre><code>&lt;script src="alloy-editor/alloy-editor-no-react-min.js"&gt;&lt;/script&gt;</code></pre>
+  <pre><code><script src="alloy-editor/alloy-editor-no-react-min.js"></script></code></pre>
 
   <span>If you use both React and CKEditor on your page, then just include AlloyEditor's core</span>
-  <pre><code>&lt;script src="alloy-editor/alloy-editor-core-min.js"&gt;&lt;/script&gt;</code></pre>
+  ```html
+  <script src="alloy-editor/alloy-editor-core-min.js"></script>
+  ```
 </section>
 
 
@@ -43,19 +50,19 @@ There are a <strong>few ways</strong> to add the editor to the page:
 
 ## Invoke the static editable method of AlloyEditor
 
-<pre><code class="javascript">AlloyEditor.editable('myContentEditable');</code></pre>
+```js
+AlloyEditor.editable('myContentEditable');
+```
 </article>
 
 <article id="article4">
 
 ## Retrieve the content from the editor
 
-<pre>
-	<code>
+```js
 var alloyEditor = AlloyEditor.editable('myContentEditable');
 
 var content = alloyEditor.get('nativeEditor').getData();
-	</code>
-</pre>
+```
 
 </article>
