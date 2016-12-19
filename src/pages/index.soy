@@ -12,6 +12,7 @@ description: "Something nice and compelling about the project. Make it short and
 	{call main.render data="all"}
 		{param content kind="html"}
 			{call .header data="all" /}
+			{call .demo /}
 			{call .why /}
 			{call .features /}
 			{call .how /}
@@ -35,6 +36,15 @@ description: "Something nice and compelling about the project. Make it short and
 			</div>
 		</div>
 	</header>
+{/template}
+
+/**
+*
+*/
+{template .demo}
+	<article>
+		{call Demo.render /}
+	</article>
 {/template}
 
 /**

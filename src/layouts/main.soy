@@ -5,7 +5,7 @@
  * @param? elementClasses
  */
 {template .render}
-	<div class="{$elementClasses ?: 'main'}">
+	<div class="{$elementClasses ? 'chicote' : 'main cacafuti'}">
 		<main class="content">
 			{call Topbar.render data="all" /}
 

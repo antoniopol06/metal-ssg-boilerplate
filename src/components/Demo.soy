@@ -1,0 +1,14 @@
+{namespace Demo}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	<div id="contentEditable" contenteditable="true" data-placeholder="Write content here">
+    </div>
+    <script>
+    	window.onload = function() {lb}
+			AlloyEditor.editable('contentEditable');
+		{rb}
+    </script>
+{/template}

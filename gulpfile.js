@@ -11,6 +11,12 @@ ssg.registerTasks({
 	plugins: ['metal-ssg-components']
 });
 
+// AlloyEditor -----------------------------------------------------------------
+gulp.task('alloyeditor', () => {
+	return gulp.src('node_modules/alloyeditor/dist/**')
+		.pipe(gulp.dest('dist/js'));
+});
+
 // CSS -------------------------------------------------------------------------
 
 gulp.task('css', () => {
@@ -59,7 +65,7 @@ gulp.task('watch', () => {
 // Build -----------------------------------------------------------------------
 
 gulp.task('build', (callback) => {
-	runSequence('generate', ['css', 'fonts', 'wedeploy'], callback);
+	runSequence('generate', ['alloyeditor', 'css', 'fonts', 'wedeploy'], callback);
 });
 
 gulp.task('default', (callback) => {
