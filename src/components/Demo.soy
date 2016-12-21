@@ -2,13 +2,13 @@
 
 /**
  * This renders the component's whole content.
+ * @param divId
+ * @param? contentHtml
  */
 {template .render}
-	<div id="contentEditable" contenteditable="true" data-placeholder="Write content here">
+	<div id="{$divId}" contenteditable="true" data-placeholder="Write content here">
+		{if $contentHtml}
+			{$contentHtml}
+		{/if}
     </div>
-    <script>
-    	window.onload = function() {lb}
-			AlloyEditor.editable('contentEditable');
-		{rb}
-    </script>
 {/template}
